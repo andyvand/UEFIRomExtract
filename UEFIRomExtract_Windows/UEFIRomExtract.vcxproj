@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{65B1EB17-357B-4416-9621-D9EC75693452}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UEFIRomExtract</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>
+    </LinkIncremental>
+    <GenerateManifest>Yes</GenerateManifest>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsManaged>false</CompileAsManaged>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UseUnicodeForAssemblerListing>
+      </UseUnicodeForAssemblerListing>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <ErrorReporting>
+      </ErrorReporting>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <Version>1.0</Version>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <LargeAddressAware>true</LargeAddressAware>
+      <TerminalServerAware>true</TerminalServerAware>
+      <SetChecksum>true</SetChecksum>
+      <TargetMachine>MachineX86</TargetMachine>
+      <CLRThreadAttribute>
+      </CLRThreadAttribute>
+      <ImageHasSafeExceptionHandlers>
+      </ImageHasSafeExceptionHandlers>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <NoEntryPoint>false</NoEntryPoint>
+      <CLRImageType>Default</CLRImageType>
+      <AllowIsolation>Yes</AllowIsolation>
+      <EnableUAC>Yes</EnableUAC>
+      <ManifestFile>$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <UACExecutionLevel>asInvoker</UACExecutionLevel>
+      <UACUIAccess>No</UACUIAccess>
+    </Link>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+    <ResourceCompile>
+      <AdditionalOptions>/r %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WIN64;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsManaged>false</CompileAsManaged>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <Version>1.0</Version>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <LargeAddressAware>true</LargeAddressAware>
+      <TerminalServerAware>true</TerminalServerAware>
+      <SetChecksum>true</SetChecksum>
+      <CLRThreadAttribute>MTAThreadingAttribute</CLRThreadAttribute>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <AllowIsolation>true</AllowIsolation>
+      <EnableUAC>true</EnableUAC>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WIN64;WIN64;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="MakeTable.c" />
+    <ClCompile Include="SetMem16.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
